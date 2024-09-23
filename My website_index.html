@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A portfolio of Godot games and video tutorials">
+    <title>Yanni's Games and Tutorials</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #000000;
+        }
+        header {
+            background-color: #2382ae;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .tab {
+            padding: 10px 20px;
+            background-color: #ececec;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .tab.active {
+            background-color: #d4d4d4;
+        }
+        .content {
+            display: none;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .content.active {
+            display: block;
+        }
+        footer {
+            background-color: #282c34;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .description {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #ececec;
+            border-radius: 5px;
+        }
+        #searchContainer {
+            text-align: center;
+            margin: 20px;
+        }
+        #search {
+            padding: 10px;
+            width: 300px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        form {
+            margin: 20px 0;
+        }
+        textarea, input[type="email"], input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 15px;
+            border-radius: 5px;
+            background-color: #282c34;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .feedback-item {
+            margin-bottom: 10px;
+        }
+        .reply {
+            margin-left: 20px;
+            padding: 5px;
+            background-color: white;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .delete-button {
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+        .message {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .success {
+            color: green;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Yanni's Games and Tutorials</h1>
+    <p>Explore my games and tutorials below</p>
+    <div id="searchContainer">
+        <input type="text" id="search" placeholder="Search for a game or tutorial..." oninput="filterContent()">
+    </div>
+</header>
+
+<div class="tabs">
+    <div class="tab active" onclick="showContent('games')">Games</div>
+    <div class="tab" onclick="showContent('about')">About Me</div>
+    <div class="tab" onclick="showContent('tutorials')">Video Tutorials</div>
+    <div class="tab" onclick="showContent('feedback')">Feedback</div>
+    <div class="tab" onclick="showContent('newsletter')">Newsletter</div>
+</div>
+
+<div id="games" class="content active">
+    <h2>Games</h2>
+    <div class="game" data-game-name="Light in Shadows">
+        <h3>Game 1: Light in Shadows</h3>
+        <p>A suspenseful adventure set in a world of horror puzzles and fun.</p>
+        <div class="description">
+            <h4>Description:</h4>
+            <p>Type your detailed description for Light in Shadows here.</p>
+        </div>
+    </div>
+    <div class="game" data-game-name="Yannis Platformer">
+        <h3>Game 2: Yannis Platformer</h3>
+        <p>An exciting platformer where precision and timing are key.</p>
+        <div class="description">
+            <h4>Description:</h4>
+            <p>Type your detailed description for Yannis Platformer here.</p>
+        </div>
+    </div>
+    <div class="game" data-game-name="The Bean World">
+        <h3>Game 3: The Bean World</h3>
+        <p>A whimsical adventure where you play as a super cat with god powers!</p>
+        <div class="description">
+            <h4>Description:</h4>
+            <p>Type your detailed description for The Bean World here.</p>
+        </div>
+    </div>
+    <div class="game" data-game-name="Car Simulator">
+        <h3>Game 4: Car Simulator</h3>
+        <p>A simple car simulator where you can drive and explore freely.</p>
+        <div class="description">
+            <h4>Description:</h4>
+            <p>Type your detailed description for Car Simulator here.</p>
+        </div>
+    </div>
+</div>
+
+<div id="about" class="content">
+    <h2>About Me</h2>
+    <p>Hi there! My name is Yanni, I'm 12 years old and have been game developing for 6 and a half months. I absolutely love it! Every project is a fun challenge, and I get to learn something new every day.</p>
+    <p>I enjoy making all kinds of games, from spooky horror adventures to fun platformers and cool simulations. My goal is to create awesome worlds where players can dive in and have a blast! I get inspired by all sorts of games and try to add my own twist to everything I create.</p>
+    <p>Right now, I'm all about combining great stories with fun gameplay. I think a good story makes a game even more exciting and keeps players coming back for more!</p>
+    <p>I’m always looking to improve my skills, whether it’s learning new stuff in Godot or just getting better at coding. I love connecting with other game creators and sharing ideas!</p>
+    <p>If you have any tips or want to chat, please feel free to reach out!</p>
+    <p>Email: <a href="mailto:Yannirix@gmail.com">Yannirix@gmail.com</a></p>
+    <p>Text me for more info!</p>
+</div>
+
+<div id="tutorials" class="content">
+    <h2>Video Tutorials</h2>
+    <div class="video" data-video-name="How I Started on Godot">
+        <iframe width="560" height="315" src="https://www.youtube.com/" frameborder="0" allowfullscreen></iframe>
+        <p>Video in progress: A walkthrough of Light in Shadows .</p>
+    </div>
+    <div class="video" data-video-name="My First Godot Game">
+        <iframe width="560" height="315" src="https://www.youtube.com/" frameborder="0" allowfullscreen></iframe>
+        <p>Video in progress: A walkthrough of The bean world.</p>
+    </div>
+    <div class="video" data-video-name="My Platformer Tutorial">
+    <iframe width="560" height="315" src="https://www.youtube.com/" frameborder="0" allowfullscreen></iframe>
+    <p>Video in progress: A walkthrough of Yanni's Platformer.</p>
+</div>
+
+    <div class="video" data-video-name="Car Simulator Tutorial">
+        <iframe width="560" height="315" src="https://www.youtube.com/" frameborder="0" allowfullscreen></iframe>
+        <p>Video in progress: A walkthrough of car simulator.</p>
+    </div>
+    <div class="video" data-video-name="Light in Shadows Tutorial">
+        <iframe width="560" height="315" src="https://www.youtube.com/" frameborder="0" allowfullscreen></iframe>
+        <p>Video in progress: A walkthrough for my game, Light in Shadows.</p>
+    </div>
+</div>
+
+<div id="feedback" class="content">
+    <h2>Feedback</h2>
+    <form id="feedbackForm" onsubmit="submitFeedback(event)">
+        <input type="text" id="nameInput" placeholder="Your name" required>
+        <textarea id="feedbackInput" placeholder="Leave your feedback here..." required></textarea>
+        <button type="submit">Submit Feedback</button>
+    </form>
+    <div id="feedbackList"></div>
+</div>
+
+<div id="newsletter" class="content">
+    <h2>Newsletter</h2>
+    <p>Stay tuned! The newsletter feature is still in progress.</p>
+    <form id="newsletterForm" onsubmit="subscribeNewsletter(event)">
+        <input type="email" id="emailInput" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+    </form>
+</div>
+
+<footer>
+    <p>&copy; 2024 Yanni Flohr. All rights reserved.</p>
+</footer>
+
+<script>
+    function showContent(contentId) {
+        const contents = document.querySelectorAll('.content');
+        const tabs = document.querySelectorAll('.tab');
+        contents.forEach(content => {
+            content.classList.remove('active');
+        });
+        tabs.forEach(tab => {
+            tab.classList.remove('active');
+        });
+        document.getElementById(contentId).classList.add('active');
+        document.querySelector(`.tab[onclick="showContent('${contentId}')"]`).classList.add('active');
+    }
+
+    function filterContent() {
+        const searchValue = document.getElementById('search').value.toLowerCase();
+        const games = document.querySelectorAll('.game');
+        games.forEach(game => {
+            const gameName = game.getAttribute('data-game-name').toLowerCase();
+            if (gameName.includes(searchValue)) {
+                game.style.display = 'block';
+            } else {
+                game.style.display = 'none';
+            }
+        });
+    }
+
+    window.onload = function() {
+        loadFeedback();
+    };
+
+    function loadFeedback() {
+        const feedbackList = JSON.parse(localStorage.getItem('feedbackList')) || [];
+        feedbackList.forEach(item => {
+            const feedbackItem = document.createElement('div');
+            feedbackItem.classList.add('feedback-item');
+            feedbackItem.innerHTML = `<strong>${item.name}:</strong> ${item.feedback} <button class="delete-button" onclick="deleteFeedback(this)">Delete</button>`;
+            document.getElementById('feedbackList').appendChild(feedbackItem);
+        });
+    }
+
+    function submitFeedback(event) {
+        event.preventDefault();
+        const name = document.getElementById('nameInput').value;
+        const feedback = document.getElementById('feedbackInput').value;
+
+        const swearWords = ["badword1", "badword2"]; // Replace with actual swear words
+        const containsSwearWords = swearWords.some(word => feedback.includes(word));
+
+        if (containsSwearWords) {
+            alert("Please remove offensive language.");
+            return;
+        }
+
+        const feedbackList = document.getElementById('feedbackList');
+        const feedbackItem = document.createElement('div');
+        feedbackItem.classList.add('feedback-item');
+        feedbackItem.innerHTML = `<strong>${name}:</strong> ${feedback} <button class="delete-button" onclick="deleteFeedback(this)">Delete</button>`;
+        
+        feedbackList.appendChild(feedbackItem);
+        saveFeedback(name, feedback);
+        document.getElementById('nameInput').value = '';
+        document.getElementById('feedbackInput').value = '';
+    }
+
+    function saveFeedback(name, feedback) {
+        const feedbackList = JSON.parse(localStorage.getItem('feedbackList')) || [];
+        feedbackList.push({ name, feedback });
+        localStorage.setItem('feedbackList', JSON.stringify(feedbackList));
+    }
+
+    function deleteFeedback(button) {
+        const feedbackItem = button.parentElement;
+        const feedbackList = JSON.parse(localStorage.getItem('feedbackList')) || [];
+        const index = Array.from(document.getElementById('feedbackList').children).indexOf(feedbackItem);
+        feedbackList.splice(index, 1);
+        localStorage.setItem('feedbackList', JSON.stringify(feedbackList));
+        feedbackItem.remove();
+    }
+
+    function subscribeNewsletter(event) {
+        event.preventDefault();
+        const email = document.getElementById('emailInput').value;
+        alert(`Subscribed ${email} to the newsletter!`);
+        document.getElementById('emailInput').value = '';
+    }
+</script>
+
+</body>
+</html>
